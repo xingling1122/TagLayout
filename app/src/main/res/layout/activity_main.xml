@@ -4,14 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#06030e">
+    android:background="#06030e"
+    tools:context=".MainActivity">
 
-    <com.github.xingling.taglayoutlib.TagLayout
-        android:id="@+id/tagLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        app:max_select="1"></com.github.xingling.taglayoutlib.TagLayout>
+        android:layout_height="match_parent">
+
+        <com.github.xingling.taglayoutlib.TagLayout
+            android:id="@+id/tagLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:max_select="1"></com.github.xingling.taglayoutlib.TagLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

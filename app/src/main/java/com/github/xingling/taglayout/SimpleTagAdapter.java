@@ -23,7 +23,7 @@ public class SimpleTagAdapter extends TagAdapter<String> {
     @Override
     public View getView(BaseTagLayout parent, int position, String s) {
         TextView tv = (TextView) inflater.inflate(R.layout.item_tag, null);
-        tv.setText(getItem(position));
+        tv.setText(s);
         return tv;
     }
 }

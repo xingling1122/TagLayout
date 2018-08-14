@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         tagLayout.setOnTagClickListener(new TagLayout.OnTagClickListener() {
             @Override
             public boolean onTagClick(View view, int position, BaseTagLayout parent) {
+                initData();
+                mAdapter.notifyDataChanged();
                 return false;
             }
         });
