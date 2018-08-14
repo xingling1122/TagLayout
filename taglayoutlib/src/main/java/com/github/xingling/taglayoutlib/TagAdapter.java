@@ -24,6 +24,19 @@ public abstract class TagAdapter<T> {
         mTagDatas = new ArrayList<T>(Arrays.asList(datas));
     }
 
+    public void setData(List<T> datas) {
+        mTagDatas = datas;
+        notifyDataChanged();
+    }
+
+    public void addData(List<T> datas) {
+        if (mTagDatas == null) {
+            mTagDatas = new ArrayList<>();
+        }
+        mTagDatas.addAll(datas);
+        notifyDataChanged();
+    }
+
     interface OnDataChangedListener {
         void onChanged();
     }
@@ -72,12 +85,12 @@ public abstract class TagAdapter<T> {
     public abstract View getView(BaseTagLayout parent, int position, T t);
 
 
-    public void onSelected(int position, View view){
-        Log.d("zhy","onSelected " + position);
+    public void onSelected(int position, View view) {
+        Log.d("zhy", "onSelected " + position);
     }
 
-    public void unSelected(int position, View view){
-        Log.d("zhy","unSelected " + position);
+    public void unSelected(int position, View view) {
+        Log.d("zhy", "unSelected " + position);
     }
 
     public boolean setSelected(int position, T t) {
